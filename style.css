@@ -1,0 +1,103 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c62a8;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-image: urlurl('images/background.jpg'); /* Replace with your own flower or computer image URL */
+    background-size: cover;
+    background-position: center;
+    color: rgb(158, 44, 44);
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  header .header-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff;  /* Ensuring the welcome text is visible */
+  }
+  
+  header .header-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Making sure the subtext is visible */
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .content-box {
+    background-color: rgb(197, 174, 174);
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .content-box:hover {
+    transform: scale(1.05);
+  }
+  
+  h2 {
+    color: #642880;
+  }
+  
+  /* Button */
+  .button {
+    display: inline-block;
+    background-color: #007bff;
+    color: rgb(58, 49, 49);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #15212e;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: rgb(175, 56, 56);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content-box {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
