@@ -3,42 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Stylish Website</title>
-  
-  <!-- Link to the external CSS file -->
-  <link rel="stylesheet" href="style.css">
+  <title>Hamna Basit Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5; /* Light grey background for overall */
+      color: #333;
+    }
+
+    header {
+      background-color: #34495e; /* Dark blue-grey */
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #2c3e50;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 40px;
+      color: #f9ca24; /* Bright Yellow */
+    }
+
+    .header-content p {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #ecf0f1; /* Light grey */
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      background-color: #d6eaf8; /* Light soft blue background for main section */
+      min-height: 80vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .content-box {
+      background-color: #ebf5fb; /* Very light blue boxes */
+      border: 1px solid #aed6f1;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .content-box h2 {
+      margin-top: 0;
+      color: #2980b9; /* Blue headings */
+      font-size: 24px;
+    }
+
+    .content-box p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    #project-details {
+      background-color: #cae9f5;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #project-details h3 {
+      margin: 0 0 10px 0;
+      color: #1a5276;
+      font-size: 28px;
+    }
+
+    #project-details p {
+      font-size: 18px;
+      color: #21618c;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .button-link:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background-color: #34495e;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ecf0f1;
+      margin-top: 40px;
+      border-top: 2px solid #2c3e50;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <div class="header-content">
-      <h1>Welcome to Hamna basit  Website</h1>
+      <h1>Welcome to Hamna Basit Website</h1>
       <p>Explore, Learn, and Get Inspired!</p>
     </div>
   </header>
 
   <section class="main-content">
+    <div class="content-box" id="projects-box" style="cursor: pointer;">
+      <h2>My Projects</h2>
+      <p>Check out some of the projects I've worked on. I enjoy creating useful web applications.</p>
+    </div>
+
+    <div id="project-details" class="hidden">
+      <h3>Public Transport</h3>
+      <p>Storyboard</p>
+      <a href="https://www.canva.com/design/DAGleFdDs_I/sPnKqFssWffNNoLO3nYSbw/edit" 
+         target="_blank" 
+         class="button-link">
+        View Storyboard
+      </a>
+    </div>
+
     <div class="content-box">
       <h2>About Me</h2>
       <p>I'm passionate about web development, learning new things, and sharing knowledge.</p>
     </div>
-    <div class="content-box">
-      <h2>My Projects</h2>
-      <p>Check out some of the projects I've worked on. I enjoy creating useful web applications.</p>
-    </div>
+
     <div class="content-box">
       <h2>Contact</h2>
       <p>Feel free to reach out to me for collaborations, feedback, or just a friendly chat!</p>
-      <a href="mailto:youremail@example.com" class="button">Send Email</a>
+      <a href="mailto:youremail@example.com" class="button-link">Send Email</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Hamana basit  Website. All Rights Reserved.</p>
+    <p>&copy; 2025 Hamna Basit Website. All Rights Reserved.</p>
   </footer>
 
-  <!-- Link to the external JavaScript file -->
-  <script defer src="script.js"></script>
+  <script defer>
+    document.getElementById('projects-box').addEventListener('click', function() {
+      const details = document.getElementById('project-details');
+      details.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
